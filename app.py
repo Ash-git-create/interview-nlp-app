@@ -5,6 +5,7 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 import umap
+from transformers import AutoModelForSeq2SeqLM
 
 # Load RoBERTa model for transcript classification
 roberta_model_name = "Ash00win/roberta-finetuned"  # Your Hugging Face model repo
