@@ -1,7 +1,7 @@
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, pipeline
 
 # Load FLAN-T5
-model_id = "google/flan-t5-large"
+model_id = "facebook/bart-large-cnn"
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 model = AutoModelForSeq2SeqLM.from_pretrained(model_id)
 generator = pipeline("text2text-generation", model=model, tokenizer=tokenizer)
