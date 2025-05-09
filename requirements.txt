@@ -1,7 +1,8 @@
 streamlit
-transformers
 torch
+transformers
 plotly
 pandas
+numpy
 umap-learn
 scikit-learn
