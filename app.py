@@ -1,6 +1,6 @@
 import streamlit as st
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
-from transformers import pipeline
+from transformers import AutoModelForSeq2SeqLM, pipeline  # Import the missing class here
 import torch
 import pandas as pd
 import numpy as np
@@ -14,7 +14,7 @@ model = AutoModelForSequenceClassification.from_pretrained(MODEL_NAME)
 # Load FLAN-T5 model for question generation
 flan_model_id = "google/flan-t5-large"
 flan_tokenizer = AutoTokenizer.from_pretrained(flan_model_id)
-flan_model = AutoModelForSeq2SeqLM.from_pretrained(flan_model_id)
+flan_model = AutoModelForSeq2SeqLM.from_pretrained(flan_model_id)  # Fixing this import
 generator = pipeline("text2text-generation", model=flan_model, tokenizer=flan_tokenizer)
 
 category_prompts = {
