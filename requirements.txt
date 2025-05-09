@@ -1,7 +1,7 @@
 streamlit
 transformers
 torch
+plotly
 pandas
+umap-learn
 scikit-learn
-matplotlib
-seaborn
